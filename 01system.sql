@@ -34,7 +34,14 @@ GRANT CONNECT, RESOURCE, dba to javauser;
 
 -- 4.접속요청을 진행하면된다.
 
-
+-- 5.시퀸스 설정
+CREATE SEQUENCE emp_
+START WITH 0
+INCREMENT BY 1
+MINVALUE 0
+MAXVALUE 10000
+NOCYCLE
+CACHE 2;
 
 
 
