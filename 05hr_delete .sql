@@ -1,0 +1,59 @@
+-- delete
+-- DELETE FROM table_name WHERE conditions;
+
+--(dept)부서테이블을 모두삭제
+SELECT * FROM user_tables;
+
+drop TABLE dept2;
+
+CREATE TABLE dept2
+as
+SELECT * FROM departments;
+
+SELECT * FROM dept2;
+
+DELETE FROM dept2;
+TRUNCATE TABLE dept2;
+
+rollback;
+
+-- dept2 30번부서를 삭제하시오.
+SELECT * FROM dept2 WHERE department_id = 30;
+DELETE FROM dept2 WHERE department_id = 30;
+
+-- 제약조건을 설정
+drop table emp01; 
+DESC EMP01;
+SELECT * FROM EMP01;
+CREATE TABLE EMP01(
+    EMPNO NUMBER(4),
+    ENAME VARCHAR2(10) NOT NULL,
+    job_name VARCHAR2(9),
+    MGR NUMBER(4),
+    HIREDATE DATE NOT NULL,
+    SAL NUMBER(7,2) NOT NULL,
+    COMM NUMBER(7,2),
+    DEPTNO NUMBER(2) NOT NULL,
+    CONSTRAINT pk_emp01_no PRIMARY KEY(empno)
+);
+
+INSERT INTO EMP01 (EMPNO, ENAME, job_name, MGR, HIREDATE, SAL, COMM, DEPTNO)
+VALUES (7369, 'SMITH', 'CLEAK', 7836, TO_DATE('80/12/17', 'YY/MM/DD'), 800, NULL, 20);
+
+INSERT INTO EMP01 (EMPNO, ENAME, job_name, MGR, HIREDATE, SAL, COMM, DEPTNO)
+VALUES (7499, 'ALLEN', 'SALESMAN', 7369, TO_DATE('87/12/20', 'YY/MM/DD'), 1600, 300, 30);
+
+INSERT INTO EMP01 (EMPNO, ENAME, job_name, MGR, HIREDATE, SAL, COMM, DEPTNO)
+VALUES (7839, 'KING', 'PRESIDENT', NULL, TO_DATE('81/02/08', 'YY/MM/DD'), 5000, NULL, 10);
+
+
+
+
+
+
+
+
+
+
+
+
