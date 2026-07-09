@@ -90,6 +90,14 @@ MAXVALUE 1000;
 -- dep_seq 삭제하시오.
 DROP SEQUENCE dep_seq;
 
+SELECT * FROM user_tables;
+SELECT * FROM user_constraints;
+SELECT * FROM user_cons_columns;
+SELECT * FROM user_sequences;
+SELECT * FROM user_indexes WHERE table_name = 'EMPLOYEES';
+SELECT * FROM user_ind_columns WHERE table_name = 'EMPLOYEES';
+
+
 
 
 
